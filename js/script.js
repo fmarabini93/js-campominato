@@ -40,8 +40,8 @@ var gameOver = false;
 
 while (score.length < maxChoices && gameOver == false) {
       do {
-            choice = prompt("Please insert a number between 1 and 100")
-      } while (choice < 1 || choice > 100 || inArray(choice, score))
+            choice = prompt("Please insert a number between 1 and 100 (and do not repeat numbers, they won't count!!)")
+      } while (choice < 1 || choice > 100 || inArray(choice, score) || isNaN(parseInt(choice)))
       if (inArray(choice, bombs)) {
                   gameOver = true;
       } else {
@@ -49,10 +49,12 @@ while (score.length < maxChoices && gameOver == false) {
       }
       console.log(choice, score.length);
 }
+
+var result = document.getElementById("result");
 if (gameOver == true) {
-      console.log("You stepped on a bomb! You earned " + score.length + " points");
+      result.innerHTML = ("You stepped on a bomb! <i class='fas fa-bomb fa-3x'></i> You earned " + "<strong>" + score.length + "</strong>" + " points");
 }
 
 if (score.length == maxChoices) {
-      console.log("Congrats, you're score is " + maxChoices + "! You won!");
+      result.innerHTML = ("Congrats, you're score is " + maxChoices + "! You won!");
 }
