@@ -60,7 +60,7 @@ if (gameOver == true && score.length != 0) {
 if (score.length == maxChoices) {
       result.innerHTML = ("Congrats, you scored " + maxChoices + " points! You won!");
 } else if (score.length == 0) {
-      result.innerHTML = "You're first choice was a bomb number: you must be lucky in love.." + "<br>" + "<button onClick='window.location.reload();'>Click here to start another round!</button>";
+      result.innerHTML = "You're first choice was a bomb number: you must be lucky in love.." + "<br>" + "<button class='animated' onClick='window.location.reload();'>Click here to start another round!</button>";
 } else {
-      document.getElementById("bomb-choice").innerHTML = "Bomb number: " + "<span style='color:yellow'>" + bombChoice + "</span>" + "<br>" + "<button onClick='window.location.reload();'>Click here to start another round!</button>";
+      document.getElementById("bomb-choice").innerHTML = "Bomb number: " + "<span style='color:yellow'>" + bombChoice + "</span>" + "<br>" + "<button class='animated' onClick='window.location.reload();'>Click here to start another round!</button>";
 }
