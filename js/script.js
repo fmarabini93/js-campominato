@@ -55,7 +55,7 @@ var result = document.getElementById("result");
 var numbers = document.getElementById("correct-numbers");
 
 if (gameOver == true && score.length != 0) {
-      result.innerHTML = ("You stepped on a bomb! <i class='fas fa-bomb fa-3x'></i> You scored " + score.length + " points");
+      result.innerHTML = ("<i class='fas fa-bomb fa-5x'></i> You scored " + "<span style='color:red'>" + score.length + "</span>");
 }
 
 if (score.length == maxChoices) {
@@ -63,6 +63,6 @@ if (score.length == maxChoices) {
 } else if (score.length == 0) {
       numbers.innerHTML = "You're first choice was a bomb number: you must be lucky in love.."      
 } else {
-      numbers.innerHTML = "Here are your choosen numbers: " + score;
-      document.getElementById("bomb-choice").innerHTML = "Bomb number is: " + bombChoice;
+      numbers.innerHTML = "Correct numbers: " + "<span style='color:blue'>" + score + "</span>";
+      document.getElementById("bomb-choice").innerHTML = "Bomb number: " + "<span style='color:yellow'>" + bombChoice + "</span>";
 }
