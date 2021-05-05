@@ -55,11 +55,11 @@ var result = document.getElementById("result");
 var numbers = document.getElementById("correct-numbers");
 
 if (gameOver == true && score.length != 0) {
-      result.innerHTML = ("You stepped on a bomb! <i class='fas fa-bomb fa-3x'></i> You earned " + "<strong>" + score.length + "</strong>" + " points");
+      result.innerHTML = ("You stepped on a bomb! <i class='fas fa-bomb fa-3x'></i> You scored " + score.length + " points");
 }
 
 if (score.length == maxChoices) {
-      result.innerHTML = ("Congrats, you're score is " + maxChoices + "! You won!");
+      result.innerHTML = ("Congrats, you scored " + maxChoices + " points! You won!");
 } else if (score.length == 0) {
       numbers.innerHTML = "You're first choice was a bomb number: you must be lucky in love.."      
 } else {
