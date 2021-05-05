@@ -23,18 +23,18 @@ span {
 
 @keyframes mybtn {
       0% {
-            transform: scale(1x);
+            transform: scale(1);
       }
       50% {
-            transform: scale(1.5x);
+            transform: scale(1.5);
       }
       100% {
-            transform: scale(1x);
+            transform: scale(1);
       }
 }
 .animated {
       margin-top: 100px;
       padding: 10px;
       border: 1px solid #000000;
-      animation: mybtn 1.5s linear infinite;
+      animation: mybtn 1s linear infinite;
 }
