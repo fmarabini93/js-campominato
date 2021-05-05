@@ -7,10 +7,11 @@
 body {
       height: 100vh;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: space-around;
       align-items: center;
-      padding: 0 100px;
       font-family: 'Press Start 2P', cursive;
+      text-align: center;
       font-size: 30px;
       background-image: linear-gradient(to bottom left, #A8EB12, #12EB5D);
 }
